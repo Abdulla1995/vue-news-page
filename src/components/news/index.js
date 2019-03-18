@@ -1,3 +1,5 @@
+//news/index.js
+
 import Vue from 'vue'
 import NewsHolder from './NewsHolder';
 
