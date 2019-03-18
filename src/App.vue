@@ -1,28 +1,28 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="container">
+        <h1 class="text-center mb-5">My component based structure</h1>
+        <div class="row">
+
+            <div class="col-md-9 col-12">
+                <news-holder v-on:read="newsRead" date="yesterday"></news-holder>
+            </div>
+            <div class="col-md-2 d-sm-none d-md-block">
+                <links-holder></links-holder>
+
+                <adds-holder></adds-holder>
+            </div>
+        </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'app',
-  components: {
-    HelloWorld
+  methods:{
+    newsRead(num){
+      alert('Xəbəri oxudunuz! Nömrəsi: ' + num)
+    }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
